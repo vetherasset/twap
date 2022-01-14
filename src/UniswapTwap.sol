@@ -157,10 +157,9 @@ contract UniswapTwap is IUniswapTWAP, Ownable {
         ) = UniswapV2OracleLibrary.currentCumulativePrices(address(pair));
         uint priceCumulativeEnd = isFirst ? price0Cumulative : price1Cumulative;
         uint priceCumulativeStart = pairData.nativeTokenPriceCumulative;
-        require(
-            priceCumulativeEnd >= priceCumulativeStart,
-            "price cumulative end < start"
-        );
+        // NOTE: Overflow is desired
+        // Difference between 2 cumulative prices will be correct even if the
+        // latest price cumulative overflowed.
         unchecked {
             pairData.nativeTokenPriceAverage = FixedPoint.uq112x112(
                 uint224(
