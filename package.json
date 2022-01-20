@@ -1,31 +1,32 @@
 {
-  "name": "twap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vetherasset/twap.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vetherasset/twap/issues"
-  },
-  "homepage": "https://github.com/vetherasset/twap#readme",
-  "devDependencies": {
-    "prettier": "^2.5.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.19",
-    "solhint": "^3.3.6"
-  },
-  "dependencies": {
-    "@openzeppelin/contracts": "4.4.2"
-  }
+    "name": "twap",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vetherasset/twap.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vetherasset/twap/issues"
+    },
+    "homepage": "https://github.com/vetherasset/twap#readme",
+    "scripts": {
+        "solhint": "solhint 'src/**/*.sol'",
+        "lint": "prettier --write src/*.sol src/**/*.sol"
+    },
+    "devDependencies": {
+        "prettier": "^2.5.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.19",
+        "solhint": "^3.3.6"
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "4.4.2"
+    }
 }

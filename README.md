@@ -15,6 +15,12 @@ ethsign import
 # delete imported key
 rm $HOME/.ethereum/keystore/my-key
 
+# lint
+npm run lint
+
+# solhint
+npm run solhint
+
 # compile
 dapp build
 # test
